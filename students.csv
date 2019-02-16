@@ -1,5 +1,5 @@
-ID,FirstName,LastName,Birth,Address
-1,Alice,Mindls,06.07.1991,Lemon Street 48
-2,Elisabeth,Noker,12.11.1992,Fleet Street 2
-3,Jack,Baggins,01.04.1991,Backend Valley 1
-4,Dick,Norton,Stockholm Street 11/2
+"ID","FirstName","LastName","Birth","Address"
+"1","Alice","Mindls","06.07.1991","Lemon Street 48"
+"2","Elisabeth","Noker","12.11.1992","Fleet Street 2"
+"3","Jack","Baggins","01.04.1991","Backend Valley 1"
+"4","Dick","Norton","Stockholm Street 11/2"
