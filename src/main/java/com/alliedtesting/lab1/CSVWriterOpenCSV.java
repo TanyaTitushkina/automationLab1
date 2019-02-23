@@ -1,4 +1,4 @@
-package com.alliedtesting;
+package com.alliedtesting.lab1;
 
 import java.io.*;
 import java.util.*;
@@ -33,7 +33,7 @@ public class CSVWriterOpenCSV {
             data.add(new String[] { "1", "Alice", "Mindls", "06.07.1991", "Lemon Street 48" });
             data.add(new String[] { "2", "Elisabeth", "Noker", "12.11.1992", "Fleet Street 2" });
             data.add(new String[] { "3", "Jack", "Baggins", "01.04.1991", "Backend Valley 1" });
-            data.add(new String[] { "4", "Dick", "Norton", "Stockholm Street 11/2" });
+            data.add(new String[] { "4", "Dick", "Norton", "11.08.1991", "Stockholm Street 11/2" });
 
             writer.writeAll(data);
 

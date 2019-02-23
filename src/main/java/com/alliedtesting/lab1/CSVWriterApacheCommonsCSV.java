@@ -1,4 +1,4 @@
-package com.alliedtesting;
+package com.alliedtesting.lab1;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
@@ -22,7 +22,7 @@ public class CSVWriterApacheCommonsCSV {
             csvPrinter.printRecord("2", "Elisabeth", "Noker", "12.11.1992", "Fleet Street 2");
             csvPrinter.printRecord("3", "Jack", "Baggins", "01.04.1991", "Backend Valley 1");
 
-            csvPrinter.printRecord(Arrays.asList("4", "Dick", "Norton", "Stockholm Street 11/2"));
+            csvPrinter.printRecord(Arrays.asList("4", "Dick", "Norton", "11.08.1991", "Stockholm Street 11/2"));
 
             csvPrinter.flush();
         }
