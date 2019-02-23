@@ -18,7 +18,7 @@ public class ReadCSVDataOpenCSV {
         readAllDataAtOnce(CSV_FILE_PATH);
         System.out.println("_________________________________________________________________");
 
-        System.out.println("Read All Data with Custom Seperator at Once\n");
+        System.out.println("Read All Data with Custom Separator at Once\n");
         readDataFromCustomSeperator(CSV_FILE_PATH);
         System.out.println("_________________________________________________________________");
     }
