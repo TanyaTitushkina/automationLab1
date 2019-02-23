@@ -1,0 +1,80 @@
+<company>
+    <department name="Development" depId="1">
+        <employee empId="101">
+            <lastName>Smith</lastName>
+            <firstName>John</firstName>
+            <birthDate>01.10.1965</birthDate>
+            <position>Department Manager</position>
+            <skills>
+                <skill>Communication</skill>
+                <skill>Java</skill>
+            </skills>
+            <managerId>0</managerId>
+        </employee>
+        <employee empId="102">
+            <lastName>Felton</lastName>
+            <firstName>Tom</firstName>
+            <birthDate>14.12.1989</birthDate>
+            <position>Developer</position>
+            <skills>
+                <skill>Sleeps only 2 hours per day</skill>
+                <skill>Java</skill>
+                <skill>Hard worker</skill>
+            </skills>
+            <managerId>001</managerId>
+        </employee>
+        <employee empId="103">
+            <lastName>Nocks</lastName>
+            <firstName>Jimmy</firstName>
+            <birthDate>22.07.1985</birthDate>
+            <position>Developer</position>
+            <skills>
+                <skill>Java</skill>
+                <skill>C#</skill>
+                <skill>C++</skill>
+                <skill>Overtimes without concerns</skill>
+                <skill>Works for food</skill>
+            </skills>
+            <managerId>001</managerId>
+        </employee>
+    </department>
+    <department name="Accounting" depId="2">
+        <employee empId="201">
+            <lastName>Watson</lastName>
+            <firstName>Alice</firstName>
+            <birthDate>11.05.1987</birthDate>
+            <position>Department Manager</position>
+            <skills>
+                <skill>Communication</skill>
+                <skill>Knows all accounting terms</skill>
+            </skills>
+            <managerId>0</managerId>
+        </employee>
+        <employee empId="202">
+            <lastName>Suinton</lastName>
+            <firstName>Tilda</firstName>
+            <birthDate>23.09.1990</birthDate>
+            <position>Accountant</position>
+            <skills type="for work">
+                <skill>Counting employees' salaries</skill>
+                <skill>Responsible</skill>
+                <skill>Hard worker</skill>
+            </skills>
+            <managerId>201</managerId>
+        </employee>
+        <employee empId="203">
+            <lastName>Hamilton</lastName>
+            <firstName>Linda</firstName>
+            <birthDate>02.02.1983</birthDate>
+            <position>Accountant</position>
+            <skills type="for work">
+                <skill>Knows what is debit and credit</skill>
+            </skills>
+            <skills type="for communication">
+                <skill>Knows all news</skill>
+                <skill>Brings cookies</skill>
+            </skills>
+            <managerId>201</managerId>
+        </employee>
+    </department>
+</company>
