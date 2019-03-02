@@ -1,5 +1,5 @@
-<company>
-    <department name="Development" depId="1">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><company>
+    <department depId="1" name="Development">
         <employee empId="101">
             <lastName>Smith</lastName>
             <firstName>John</firstName>
@@ -21,7 +21,7 @@
                 <skill>Java</skill>
                 <skill>Hard worker</skill>
             </skills>
-            <managerId>001</managerId>
+            <managerId>101</managerId>
         </employee>
         <employee empId="103">
             <lastName>Nocks</lastName>
@@ -35,10 +35,10 @@
                 <skill>Overtimes without concerns</skill>
                 <skill>Works for food</skill>
             </skills>
-            <managerId>001</managerId>
+            <managerId>101</managerId>
         </employee>
     </department>
-    <department name="Accounting" depId="2">
+    <department depId="2" name="Accounting">
         <employee empId="201">
             <lastName>Watson</lastName>
             <firstName>Alice</firstName>
@@ -51,18 +51,6 @@
             <managerId>0</managerId>
         </employee>
         <employee empId="202">
-            <lastName>Suinton</lastName>
-            <firstName>Tilda</firstName>
-            <birthDate>23.09.1990</birthDate>
-            <position>Accountant</position>
-            <skills type="for work">
-                <skill>Counting employees' salaries</skill>
-                <skill>Responsible</skill>
-                <skill>Hard worker</skill>
-            </skills>
-            <managerId>201</managerId>
-        </employee>
-        <employee empId="203">
             <lastName>Hamilton</lastName>
             <firstName>Linda</firstName>
             <birthDate>02.02.1983</birthDate>
@@ -75,6 +63,18 @@
                 <skill>Brings cookies</skill>
             </skills>
             <managerId>201</managerId>
+        </employee>
+        <employee empId="203">
+            <lastName>Suinton</lastName>
+            <firstName>Tilda</firstName>
+            <birthDate>23.09.1990</birthDate>
+            <position>Accountant</position>
+            <skills type="for work">
+                <skill>Counting employees' salaries</skill>
+                <skill>Responsible</skill>
+                <skill>Hard worker</skill>
+            </skills>
+            <managerId>202</managerId>
         </employee>
     </department>
 </company>
