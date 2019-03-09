@@ -69,6 +69,13 @@ public class XmlXPathParser {
             NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(
                     doc, XPathConstants.NODESET);
 
+            if(nodeList.getLength() == 0){
+                System.out.println("Employee ID = " + empId + " is undefined.\nPlease, enter another one:");
+                empId = new Scanner(System.in).next();
+                System.out.print("\n");
+                checkTagPresence(inputFile, empId, tagName);
+            }
+
             for (int i = 0; i < nodeList.getLength(); i++) {
                 Node nNode = nodeList.item(i);
                 if (nNode.getNodeType() == Node.ELEMENT_NODE) {
