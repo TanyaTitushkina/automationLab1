@@ -27,8 +27,8 @@ public class XmlXPathParser {
 
     public static void main(String[] args) {
 
-        System.out.println("*** Employee's Data ***\n");
-        parseXmlFile(inputFile);
+    //    System.out.println("*** Employee's (id=101) Data ***\n");
+    //    parseXmlFile(inputFile);
 
         Scanner in = new Scanner(System.in);
         System.out.print("\n*** Data about employee with ID = ");
@@ -43,6 +43,11 @@ public class XmlXPathParser {
         System.out.println(" has any children?");
         System.out.print("\n");
         checkTagChildren(inputFile, tagName);
+
+        System.out.print("\n*** The values of tag: ");
+        tagName = in.next();
+        System.out.print("\n");
+        getTagValues(inputFile, tagName);
 
         in.close();
     }
@@ -141,6 +146,78 @@ public class XmlXPathParser {
                             }
                         }
                         nodeNamesList.add(node1.getNodeName());
+                    }
+                }
+            }
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (XPathExpressionException e) {
+            e.printStackTrace();
+        } catch (NullPointerException e) {
+            System.out.println("Tag <" + tagName + "> is undefined.");
+        }
+    }
+
+    public static void getTagValues(File inputFile, String tagName) {
+
+        try {
+            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder dBuilder;
+
+            dBuilder = dbFactory.newDocumentBuilder();
+
+            Document doc = dBuilder.parse(inputFile);
+            doc.getDocumentElement().normalize();
+
+            XPath xPath =  XPathFactory.newInstance().newXPath();
+
+            String expression = "/company/department/employee";
+            NodeList nodeList = (NodeList) xPath.compile(expression).evaluate(
+                    doc, XPathConstants.NODESET);
+
+            List<String> nodeNamesList = new ArrayList<>();
+            String tagContext;
+
+            for (int i = 0; i < nodeList.getLength(); i++) {
+
+                Node nNode = nodeList.item(i);
+
+                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+
+                    Element eElement = (Element) nNode;
+                    NodeList tagsList = eElement.getElementsByTagName(tagName).item(0).getChildNodes();
+
+                    if (tagsList.getLength() == 1) //even tag with nested tags has the 1st node with type TEXT_NODE
+                    {
+                        NodeList skillsList = eElement.getElementsByTagName(tagName);
+
+                        for (int count = 0; count < skillsList.getLength(); count++) {
+
+                            Node node1 = skillsList.item(count);
+
+                            if (node1.getNodeType() == node1.ELEMENT_NODE) {
+
+                                Element skill = (Element) node1;
+                                if (!nodeNamesList.contains(skill.getTextContent())) {
+                                    System.out.println(skill.getTextContent());
+                                    tagContext = skill.getTextContent();
+                                    nodeNamesList.add(tagContext);
+                                }
+                            }
+                        }
+                    } else {
+                        System.out.println("Tag <" + tagName + "> has only nested tags. \nPlease, look at <" + tagName.substring(0, tagName.length() - 1) + "> values.");
+
+                        System.out.print("\n*** The values of tag: ");
+                        tagName = new Scanner(System.in).next();
+                        System.out.print("\n");
+                        getTagValues(inputFile, tagName);
+
+                        break;
                     }
                 }
             }
