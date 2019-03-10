@@ -1,0 +1,69 @@
+{"company": [
+  {"department": {
+    "employee": [
+      {
+        "lastName": "Felton",
+        "firstName": "Tom",
+        "birthDate": "14.12.1989",
+        "position": "Department Manager",
+        "skill": ["Communication", "Java"],
+        "managerId": "0",
+        "_empId": "101"
+      },
+      {
+        "lastName": "Smith",
+        "firstName": "Henry",
+        "birthDate": "15.02.1980",
+        "position": "Developer",
+        "skill": ["Sleeps only 2 hours per day", "Java", "Hard worker"],
+        "managerId": "101",
+        "_empId": "102"
+      },
+      {
+        "lastName": "Nocks",
+        "firstName": "Jimmy",
+        "birthDate": "22.07.1985",
+        "position": "Developer",
+        "skill": ["Java", "C#", "C++", "Overtimes without concerns", "Works for food"],
+        "managerId": "101",
+        "_empId": "103"
+      }
+    ],
+    "_name": "Development",
+    "_depId": "1"
+  }},
+  {"department": {
+        "employee": [
+          {
+            "lastName": "Watson",
+            "firstName": "Alice",
+            "birthDate": "11.05.1987",
+            "position": "Department Manager",
+            "skill": ["Communication", "Knows all accounting terms"],
+            "managerId": "0",
+            "_empId": "201"
+          },
+          {
+            "lastName": "Hamilton",
+            "firstName": "Linda",
+            "birthDate": "02.02.1983",
+            "position": "Accountant",
+            "skill": ["Knows what is debit and credit","Knows all news", "Brings cookies"],
+            "managerId": "201",
+            "_empId": "202"
+          },
+          {
+            "lastName": "Suinton",
+            "firstName": "Tilda",
+            "birthDate": "23.09.1990",
+            "position": "Accountant",
+            "skill": ["Counting employees' salaries", "Responsible", "Hard worker"],
+            "managerId": "202",
+            "_empId": "203"
+          }
+        ],
+        "_name": "Accounting",
+        "_depId": "2"
+      }
+  }
+]}
