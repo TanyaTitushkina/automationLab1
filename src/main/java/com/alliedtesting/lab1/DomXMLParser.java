@@ -111,6 +111,12 @@ public class DomXMLParser {
                             .getElementsByTagName("position")
                             .item(0)
                             .getTextContent());
+                    System.out.println("Manager ID : "
+                            + eElement
+                            .getElementsByTagName("managerId")
+                            .item(0)
+                            .getTextContent());
+
                     NodeList skillsList = eElement.getElementsByTagName("skills");
 
                     for (int count = 0; count < skillsList.getLength(); count++) {
@@ -167,6 +173,11 @@ public class DomXMLParser {
                         System.out.println("Position : "
                                 + eElement
                                 .getElementsByTagName("position")
+                                .item(0)
+                                .getTextContent());
+                        System.out.println("Manager ID : "
+                                + eElement
+                                .getElementsByTagName("managerId")
                                 .item(0)
                                 .getTextContent());
                         NodeList skillsList = eElement.getElementsByTagName("skills");
@@ -294,6 +305,11 @@ public class DomXMLParser {
 
             employee.appendChild(skills);
 
+            //create new employee's manager ID
+            Element managerId = doc.createElement("managerId");
+            managerId.appendChild(doc.createTextNode("0"));
+            employee.appendChild(managerId);
+
             department.appendChild(employee);
             company.appendChild(department);
 
@@ -345,6 +361,11 @@ public class DomXMLParser {
                              .getElementsByTagName("position")
                              .item(0)
                              .getTextContent());
+                    System.out.println("Manager ID : "
+                            + eElement
+                            .getElementsByTagName("managerId")
+                            .item(0)
+                            .getTextContent());
                     NodeList skillsList = eElement.getElementsByTagName("skills");
                     for (int count = 0; count < skillsList.getLength(); count++) {
                         Node node1 = skillsList.item(count);
