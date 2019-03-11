@@ -192,7 +192,12 @@ public class DomXMLParser {
                                 System.out.print("skill name : ");
                                 System.out.println(skill.getTextContent());
                             }
-                        }
+                        } break;
+                    } else if (!eElement.getAttribute("empId").equals(empId) && temp == nList.getLength() - 1){
+                        System.out.println("Employee ID = " + empId + " is undefined.\nPlease, enter another one:");
+                        empId = new Scanner(System.in).next();
+                        System.out.print("\n");
+                        queryXmlFile_byEmpId(inputFile, empId);
                     }
                 }
             }
@@ -418,8 +423,12 @@ public class DomXMLParser {
                         if (!managerId.equals("0")){
                             System.out.println(" - managerId = " + managerId);
                             queryXmlFile_findAllMngrs(inputFile, managerId);
-
-                        }
+                        } break;
+                    } else if (!eElement.getAttribute("empId").equals(empId) && temp == nList.getLength() - 1){
+                        System.out.println("Employee ID = " + empId + " is undefined.\nPlease, enter another one:");
+                        empId = new Scanner(System.in).next();
+                        System.out.print("\n");
+                        queryXmlFile_findAllMngrs(inputFile, empId);
                     }
                 }
             }
