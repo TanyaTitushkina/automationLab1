@@ -50,6 +50,19 @@
       <artifactId>org.json.simple</artifactId>
       <version>0.4</version>
     </dependency>
+
+    <dependency>
+      <groupId>com.thoughtworks.xstream</groupId>
+      <artifactId>xstream</artifactId>
+      <version>1.4.11.1</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-client</artifactId>
+      <version>1.9.1</version>
+    </dependency>
+
   </dependencies>
 
   <build>
